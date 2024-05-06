@@ -91,7 +91,7 @@ class BasicRewarder(Rewarder):
             return self._illegal_action_penalty
 
         reward = old_state.position * self._reward_per_surpass
-        reward += len(old_state.swap_gates_inserted) * self._penalty_per_swap
+
         if action == old_state.n_connections:
             reward += self._reward_per_surpass
         else:
